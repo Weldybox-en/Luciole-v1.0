@@ -14,7 +14,7 @@ connection.onclose = function () {
 
 
 /*---------------------------------------------------------
-Fonction qui initialise les cookies
+Cookie's initization function
 ---------------------------------------------------------*/
 function init(){
   if(getCookie("wakeOn") == "on"){
@@ -27,7 +27,7 @@ function init(){
 }
 
 /*---------------------------------------------------------
-Fonction qui décode les cookie
+Cookie's reading function
 ---------------------------------------------------------*/
 function getCookie(cname) {
   var name = cname + "=";
@@ -47,7 +47,7 @@ function getCookie(cname) {
 
 
 /*---------------------------------------------------------
-objet qui contient les caractièristiques de l'alarme
+Alarm configuration object
 ---------------------------------------------------------*/
 var ac = {
 
@@ -134,7 +134,7 @@ var ac = {
       ac.alarm = ac.thr.value + ac.thm.value + ac.ths.value;
       ac.connection.send("A" + ac.thr.value + ac.thm.value);
       document.getElementById("heure").innerHTML = ac.thr.value + ":" + ac.thm.value;
-      document.cookie = "heure="+ac.thr.value + ":" + ac.thm.value;
+      document.cookie = "heure="+ac.thr.value + ":" + ac.thm.value + "; expires=Thu, 18 Dec 2020 12:00:00 UTC";
       ac.thr.disabled = true;
       ac.thm.disabled = true;
       ac.ths.disabled = true;
@@ -159,8 +159,7 @@ var ac = {
   window.addEventListener("load", ac.init);
 
   /*---------------------------------------------------------
-  Fonction qui écourte si des intéractions sont faites dans
-  le document
+  Listening actions function
   ---------------------------------------------------------*/
   document.addEventListener('DOMContentLoaded', function () {
     var wakeup = document.querySelector('input[name=wakeUP]');
@@ -176,5 +175,5 @@ var ac = {
     });
   });
   
+  //Init function
   init();
-  /*Fonction d'initialisation*/

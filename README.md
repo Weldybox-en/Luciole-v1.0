@@ -117,6 +117,3 @@ You also can check the project on my [EasyEDA account](https://easyeda.com/weldy
  - Twitter: https://twitter.com/julfiofficial
  - Blog : http://weldybox.com/
  - Youtube channel : https://www.youtube.com/channel/UCTNOaG1svq1xgBzBOvLj6vw?view_as=subscriber
- 
-  
-# Luciole-v1.0

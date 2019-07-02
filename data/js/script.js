@@ -8,13 +8,12 @@ var blue;
 var rangeDefine;
 var pickColor = 0;
 
-//Fonction qui detecte qu'on l'on active ou non l'éclairage intelligent.
 //var previousOn = false; //Précédent état de on
  var previousColor;
 
 
 /*---------------------------------------------------------
-Fonction d'initialisation, lorsque la connexion est réinitialisé
+Connexion initialization function
 ---------------------------------------------------------*/
 function init(){
   if(getCookie("onOFf") == "on"){
@@ -49,7 +48,7 @@ function init(){
 
 
 /*---------------------------------------------------------
-Fonction qui décode les cookie
+Cookie decode's function
 ---------------------------------------------------------*/
 function getCookie(cname) {
   var name = cname + "=";
@@ -68,7 +67,7 @@ function getCookie(cname) {
 }
 
 /*---------------------------------------------------------
-Différents objets et fonction relatifs au Websocket
+Objects relative to the websocket
 ---------------------------------------------------------*/
 var connection = new WebSocket('ws://' + location.hostname + ':81/',['arduino']);
 connection.onmessage = function(event){
@@ -102,7 +101,7 @@ window.onload=function(){
 
 
 /*---------------------------------------------------------
-Fonction montre les couleurs sauvegardé par l'utilisateur
+Function that show saved colors to the user
 ---------------------------------------------------------*/
 function displaySave(results){
   if(results.data[0][0] == null){
@@ -121,8 +120,7 @@ function displaySave(results){
 }
 
 /*---------------------------------------------------------
-Fonction qui permet d'utiliser le contenue d'un fichier CSV.
-Par défaut il utilise le fichier saveS.csv
+Functino that read .csv content
 ---------------------------------------------------------*/
 var position = [];
 function chooseSave(filename){
@@ -149,8 +147,7 @@ function chooseSave(filename){
 }
 
 /*---------------------------------------------------------
-Fonction qui selection dans le cercle de couleur la couleur
-choisie par l'utilisateur dans les sauvegardes.
+Selection colorpick color according to the .csv files
 ---------------------------------------------------------*/
 function setSaveColor(id){
   Papa.parse('save.csv', {
@@ -169,7 +166,7 @@ function setSaveColor(id){
 }
 
 /*---------------------------------------------------------
-Fonctino qui envois 0 lumière
+Shutdown lights function
 ---------------------------------------------------------*/
 function sendOff(){
   connection.send("R0");
@@ -178,7 +175,7 @@ function sendOff(){
 }
 
 /*---------------------------------------------------------
-Fonction fonction qui envois à l'ESP les couleurs à sauvegarder
+Function that send the colors to save
 ---------------------------------------------------------*/
 function saving(){
   connection.send("sR"+red);
@@ -188,7 +185,7 @@ function saving(){
 }
 
 /*---------------------------------------------------------
-Fonction qui rafraichie les couleurs toute les 0.5 secondes
+Function that refresh colors every 0.5 seconds
 ---------------------------------------------------------*/
 setInterval(function() {
   if(on){
@@ -200,30 +197,28 @@ setInterval(function() {
 }, 500);
 
 /*---------------------------------------------------------
-Fonction qui exécute les procédures quand l'utilisateur
-active la smart light
+Smart lights proceedings (when it is turn on)
 ---------------------------------------------------------*/
 function checkSLCheckProcess(){ 
-  if(document.getElementById("onOFf").checked){ //Si le mode libre est activé
+  if(document.getElementById("onOFf").checked){ //If the free mode is actived
     document.cookie = "previousC =" + colorPicker.color.rgbString;
     //previousColor = colorPicker.color.rgbString;
-    document.getElementById("onOFf").checked = false; //On desactive le mode libre
+    document.getElementById("onOFf").checked = false; //turn off free mode
     on = false;
-    document.cookie = "previousOn =true"; //Dans le cas ou le bouton on/off est activé on 'set' previousOn à true
+    document.cookie = "previousOn =true"; //When on/off button is on, let's set previousOn true
   }else{
-    document.cookie = "previousOn =false"; //Dans le cas ou le bouton on/off n'était pas activé on 'set' previousOn à false
+    document.cookie = "previousOn =false"; //When on/off button is off, let's set previousOn false
   }
   connection.send("#1");
 }
 
 /*---------------------------------------------------------
-Fonction qui exécute les procédures quand l'utilisateur
-désactive la smart light
+Smart lights proceedings (when it is turn off)
 ---------------------------------------------------------*/
 function checkSLUncheckProcess(){
-  if(getCookie("previousOn") == "true"){ //Si l'état précédent était "on"
+  if(getCookie("previousOn") == "true"){ //If previous state "on"
     colorPicker.color.rgbString = getCookie("previousC");
-    document.getElementById("onOFf").checked = true; //Alors on remet l'état actuel du switch à "on"
+    document.getElementById("onOFf").checked = true; //Actual state of the switch at "on"
     
     on = true;
     connection.send("#2");
@@ -232,7 +227,7 @@ function checkSLUncheckProcess(){
     sendOff();
     connection.send("#2");
   }
-  document.cookie = "previousOn =true"; //On remet le cookie previousOn à true
+  document.cookie = "previousOn =true"; //Set the cookie previousOn at true
 
   setInterval.println("off");
 }
@@ -251,7 +246,7 @@ function saveAlarme(){
   
 }
 
-//Fonction qui permet de gérer les interactions de l'utilisateur sur la page.
+//Function that managed interactions with the user
 document.addEventListener('DOMContentLoaded', function () {
   var SmartLight = document.querySelector('input[name=SmartLight]');
   var checkbox = document.querySelector('input[type="checkbox"]');
@@ -259,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var SaveMenu = document.querySelector('input[name=SaveMenu]');
 
 
-  //Fonction qui detecte quand on veut régler la plage de couleur de l'éclairage intelligent
+  //Color's range selection of the smart light option
   Reglage.addEventListener('change', function () {
     if(Reglage.checked){
       if(SaveMenu.checked){
@@ -285,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  //Fonction qui detecte lorsque l'on affiche les couleurs sauvegardées.
+  //Display saved colors actions.
   checkbox.addEventListener('change', function () {
     if (checkbox.checked) {
       document.cookie = "onOFf=on; expires=Thu, 18 Dec 2020 12:00:00 UTC";
@@ -298,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /*---------------------------------------------------------
-  Quand l'utilisateur interagis avec l'interrupteur du smartlight
+  When the user act on the smart light switch
   ---------------------------------------------------------*/
   SmartLight.addEventListener('change', function () {
     
@@ -311,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  //Fonction qui detecte quand on veut afficher ou non le menu des couleurs sauvegardés
+  //Smartlight saved colors displays
   SaveMenu.addEventListener('change', function () {
     if(SaveMenu.checked){
       if(Reglage.checked){
@@ -348,5 +343,5 @@ var colorPicker = new iro.ColorPicker(".colorPicker", {
 });
 
 
-/*Fonction d'initialisation*/
+/*Init function*/
 init();
