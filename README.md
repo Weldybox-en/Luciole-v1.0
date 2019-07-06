@@ -121,7 +121,7 @@ In this section you will find the extra stuffs concerning Luciole's board. It re
 A tiny round set of 17 LED's (54x50mm) that you can use as a useful light or as a simple decoration.
 
 <p align="center">
-  <img src="https://imgur.com/a/GeWeDxs.jpg" width="500">
+  <img src="https://imgur.com/XPcIRoF.jpg" width="500">
 </p>
 
 find more details about this layout on my ![EasyEDA project page.](https://easyeda.com/weldybox/littleledspot)
