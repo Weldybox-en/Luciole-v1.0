@@ -112,6 +112,20 @@ You can find all the informations about the components that I use though the BOM
 
 You also can check the project on my [EasyEDA account](https://easyeda.com/weldybox/luciolev2-0-microusb-3-0). You will find the same informations
 
+## Extra stuffs
+
+In this section you will find the extra stuffs concerning Luciole's board. It regroup others projects like LED set or whatever that you can use with this board.
+
+### Tiny LEDs spot
+
+A tiny round set of 17 LED's (54x50mm) that you can use as a useful light or as a simple decoration.
+
+<p align="center">
+  <img src="https://imgur.com/a/GeWeDxs.jpg" width="500">
+</p>
+
+find more details about this layout on my ![EasyEDA project page.](https://easyeda.com/weldybox/littleledspot)
+
  ## My networks
  
  - Twitter: https://twitter.com/julfiofficial
