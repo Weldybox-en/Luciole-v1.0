@@ -14,8 +14,8 @@ The Luciole-v1.0 code can be decomposed in two parts. The Arduino and the HTML/C
   - [Platformio](#platformio)
   - [Arduino](#arduino)
 - [Boards schematics](#boards-schematics)
-- [Extra stuffs](#extra stuffs)
-  - [Tiny LEDs spot](#tiny LEDs spot)
+- [Extra stuffs](#extra-stuffs)
+  - [Tiny LEDs spot](#tiny-LEDs-spot)
 - [My networks](#my-networks)
   
   
