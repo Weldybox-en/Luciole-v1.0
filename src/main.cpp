@@ -22,9 +22,13 @@ Time constants for time management
 /*--------------------------------------------------------------------------------
 Pins number for the green, red and blue's MOFETS
 --------------------------------------------------------------------------------*/
-#define REDPIN 13
-#define GREENPIN 12
-#define BLUEPIN 14
+//#define REDPIN 13
+//#define GREENPIN 12
+//#define BLUEPIN 14
+
+#define REDPIN 5
+#define GREENPIN 4
+#define BLUEPIN 0
 
 int dataSmartEcl[3]; //Array that contains the 3 UNIX timestamp used in the smart light mode.
 String couleurComp[2] = {"255,72,0","255,255,255"};
