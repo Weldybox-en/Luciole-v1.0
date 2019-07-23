@@ -142,4 +142,6 @@ I've decide to share for free my work because i've learn tanks to that! For me, 
 But i'm student and like every student i'm broken :(
 So, if you can, feel free to buy me a coffe :D
 
+[![paypal](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/purple_img.png)](https://www.buymeacoffee.com/jvZuQ8SYo)
+
 <a href="https://www.buymeacoffee.com/jvZuQ8SYo" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
