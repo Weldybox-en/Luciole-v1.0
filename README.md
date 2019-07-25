@@ -72,6 +72,15 @@ Here is the links of the two modified librairy that you need to make it work:
 #include <NTPClientByjulfi.h>
 #include <WiFiManagerByWeldy.h> 
 ```
+## Timezone settings
+
+For the moment there is no way to modify your time zone though the user interface. By default it's set at UTC+1 and this setting is given thanks to the NTPClientByjulfi librairy.
+
+The unique way to do it is by attribut you utc shift value in the utcOffsetInSeconds variable.
+
+```cpp
+unsigned long utcOffsetInSeconds = "your utc shift" ; 
+```
 
 ## Flashing ESP8266
 
