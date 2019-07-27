@@ -4,6 +4,9 @@ Luciole is an RGB controller controlled though WIFI. No need extra applications 
 
 The Luciole-v1.0 code can be decomposed in two parts. The Arduino and the HTML/CSS/JS code. The webserver is stored on the chip and communicate though a websocket with the Arduino code.
 
+
+<a href="https://www.tindie.com/stores/julfi/?ref=offsite_badges&utm_source=sellers_julfi&utm_medium=badges&utm_campaign=badge_medium"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="150" height="78"></a>
+
 # Contents
 
 - [Webserver quick view](#webserver-quick-view)
