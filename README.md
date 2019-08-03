@@ -140,7 +140,7 @@ A tiny round set of 17 LED's (54x50mm) that you can use as a useful light or as 
   <img src="https://imgur.com/9jol1dw.jpg" width="450">
 </p>
 
-find more details about this layout on my [EasyEDA project page](https://easyeda.com/weldybox/littleledspot).
+find more details about this layout on my [EasyEDA project page](https://easyeda.com/weldybox/littleledspot) or on it's [Github page](https://github.com/Weldybox-en/LEDspot_EasyEDA).
 
  ## My networks
  
