@@ -132,16 +132,6 @@ You also can check the project on my [EasyEDA account](https://easyeda.com/weldy
 
 In this section you will find the extra stuffs concerning Luciole's board. It regroup others projects like LED set or whatever that you can use with this board.
 
-### Tiny LEDs spot
-
-A tiny round set of 17 LED's (54x50mm) that you can use as a useful light or as a simple decoration.
-
-<p align="center">
-  <img src="https://imgur.com/9jol1dw.jpg" width="450">
-</p>
-
-find more details about this layout on my [EasyEDA project page](https://easyeda.com/weldybox/littleledspot) or on it's [Github page](https://github.com/Weldybox-en/LEDspot_EasyEDA).
-
  ## My networks
  
  - Twitter: https://twitter.com/julfiofficial
