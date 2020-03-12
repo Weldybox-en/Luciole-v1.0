@@ -5,9 +5,9 @@
 #include <WebSocketsServer.h>
 #include <ESP8266WebServer.h>
 #include <FS.h>
-#include <WiFiManagerByJulfi.h>
+#include <WiFiManagerByjulfi.h>
 #include <ArduinoJson.h>
-#include <NTPClientByjulfi.h>
+#include <NTPClientByJulfi.h>
 #include <ESP8266HTTPClient.h>
 #include <WiFiUdp.h>
 
