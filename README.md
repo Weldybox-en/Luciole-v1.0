@@ -83,6 +83,7 @@ The unique way to do it is by attribut you utc shift value in the utcOffsetInSec
 ```cpp
 unsigned long utcOffsetInSeconds = "your utc shift" ; 
 ```
+For me in France, the winter utc shift is *__3600__* and the summer is *__7200__*. I invite you to test and modify it according to your timezone.
 
 ## Flashing ESP8266
 
