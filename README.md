@@ -87,6 +87,10 @@ For me in France, the winter utc shift is *__3600__* and the summer is *__7200__
 
 ## Flashing ESP8266
 
+__NOTE__ : If you have order a board from me, you will automatically have this code flashed. No boards are sent faulty!
+
+If you wan't to test this code on another board, i highly recommand you to flash it with platformio! 
+
 ### Platformio
 
 Because the webserver is stored in the SPIFFS memory it is necessary to flash both original and spiffs sketches. In platformio you have to run those two commands:
