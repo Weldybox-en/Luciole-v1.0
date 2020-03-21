@@ -1,8 +1,8 @@
 # Luciole-v1.0
 
-Luciole is an RGB controller controlled though WIFI. No need extra applications because the board embeds a Webserver. Luciole has multiple operating mode in addition to basics functionalities that you can find in a classic RGB controller. The goal with this board is to provide and very simple way to control RGB LED for a very low price.
+Luciole is an RGB controller controlled though WIFI. No need extra applications because the board carry a Webserver. Luciole has multiple operating mode in addition to the basics functionalities that you can find in a classic RGB controller. The goal with this board is to provide and very simple way to control RGB LED for a very low price.
 
-The Luciole-v1.0 code can be decomposed in two parts. The Arduino and the HTML/CSS/JS code. The webserver is stored on the chip and communicate though a websocket with the Arduino code.
+The Luciole-v1.0 code can be decomposed in two parts. The Arduino and the HTML/CSS/JS code. The webserver is stored on the chip and communicate though a websocket with the Arduino code. c
 
 <p  align="center">
 <a href="https://www.tindie.com/stores/julfi/?ref=offsite_badges&utm_source=sellers_julfi&utm_medium=badges&utm_campaign=badge_medium"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="150" height="78"></a>
@@ -44,9 +44,7 @@ All the goals that i want to be implemented/is implemented on luciole's board.
 - [x] Color storing **(up to 5)**
 - [x] Smart light **/w colors settings**
 - [x] Alarm light
-- [ ] Animations
-- [ ] Pairing between multiple modules
-- [ ] RF remote control
+- [x] ![RF remote control](https://github.com/Weldybox-en/Luciole_mini_master_v1)
 
 # Implementation
 
@@ -90,12 +88,20 @@ unsigned long utcOffsetInSeconds = "your utc shift" ;
 
 ### Platformio
 
-Because the webserver is stored in the SPIFFS memory it is necessary to flash both original sktech and spiffs sketch. In platformio you have to run those two commands:
+Because the webserver is stored in the SPIFFS memory it is necessary to flash both original and spiffs sketches. In platformio you have to run those two commands:
 
-1. pio run -t upload
-2. pio run -t uploadfs
+```cpp
+pio run -t upload
+pio run -t uploadfs
+```
 
 <p align="center"><i>For more informations about flashing methods you can go read the <a href="https://docs.platformio.org/en/latest/platforms/espressif8266.html" target="_blank">platformio documentation</a></i></p>
+
+If you have any oroblems with the board, the first thing you need to do is rease the flash memory and retry to upload your sketches. Here is the command that you need to run in platformio in order to do that:
+
+```cpp
+esptool.py --port <your_ESP_port> erase_flash
+```
 
 ### Arduino
 
