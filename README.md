@@ -13,10 +13,10 @@ The Luciole-v1.0 code can be decomposed in two parts. The Arduino and the HTML/C
 - [Webserver quick view](#webserver-quick-view)
 - [Goals](#goals)
 - [Implementation](#implementation)
-  - [Librairy](#librairy)
-- [Flashing ESP8266](#flashing-esp8266)
-  - [Platformio](#platformio)
-  - [Arduino](#arduino)
+  - [Librairies](#Librairies)
+  - [Flashing ESP8266](#flashing-esp8266)
+    - [Platformio](#platformio)
+    - [Arduino IDE](#arduino-ide)
 - [Boards schematics](#boards-schematics)
 - [Extra stuffs](#extra-stuffs)
 - [My networks](#my-networks)
@@ -47,7 +47,7 @@ All the goals that i want to be implemented/is implemented on luciole's board.
 
 # Implementation
 
-## Librairy
+## Librairies
 
 In order to make luciole working there is some things to do. Firstly, luciole use some librairy that i have manually modified to fit perfectly with the app.
 
@@ -99,15 +99,14 @@ pio run -t upload
 pio run -t uploadfs
 ```
 
-<p align="center"><i>For more informations about flashing methods you can go read the <a href="https://docs.platformio.org/en/latest/platforms/espressif8266.html" target="_blank">platformio documentation</a></i></p>
-
-If you have any oroblems with the board, the first thing you need to do is rease the flash memory and retry to upload your sketches. Here is the command that you need to run in platformio in order to do that:
+If you have any problems with the board, the first thing you need to do is erease the flash memory and retry to upload your sketches. Here is the command that you need to run in platformio in order to do that:
 
 ```cpp
 esptool.py --port <your_ESP_port> erase_flash
 ```
+<p align="center"><i>For more informations about the upload methods or the general uses of platformio you can go read the <a href="https://docs.platformio.org/en/latest/platforms/espressif8266.html" target="_blank">platformio documentation</a></i></p>
 
-### Arduino
+### Arduino IDE
 
 
 ------
@@ -150,7 +149,7 @@ In this section you will find the extra stuffs concerning Luciole's board. It re
  
  ## Support me
  
-I've decide to share for free my work because i've learn tanks to that! For me, sharing project like this for free accelerate the knowledge corculation and that very cool.
+I've decide to share for free my work because i've learn tanks to that! For me, sharing project like this for free accelerate the knowledge circulation and that very cool.
 
 But i'm student and like every student i'm broken :(
 So, if you can, feel free to buy me a coffe :D
