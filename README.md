@@ -152,6 +152,6 @@ In this section you will find the extra stuffs concerning Luciole's board. It re
 I've decide to share for free my work because i've learn tanks to that! For me, sharing project like this for free accelerate the knowledge circulation and that very cool.
 
 But i'm student and like every student i'm broken :(
-So, if you can, feel free to buy me a coffe :D
+So, if you can, feel free to buy me a coffee :D
 
 [![paypal](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/jvZuQ8SYo)
