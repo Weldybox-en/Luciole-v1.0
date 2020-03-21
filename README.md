@@ -19,7 +19,6 @@ The Luciole-v1.0 code can be decomposed in two parts. The Arduino and the HTML/C
   - [Arduino](#arduino)
 - [Boards schematics](#boards-schematics)
 - [Extra stuffs](#extra-stuffs)
-  - [Tiny LEDs spot](#tiny-LEDs-spot)
 - [My networks](#my-networks)
 - [Support me](#support-me)
   
@@ -44,7 +43,7 @@ All the goals that i want to be implemented/is implemented on luciole's board.
 - [x] Color storing **(up to 5)**
 - [x] Smart light **/w colors settings**
 - [x] Alarm light
-- [x] ![RF remote control](https://github.com/Weldybox-en/Luciole_mini_master_v1)
+- [x] [RF remote control](https://github.com/Weldybox-en/Luciole_mini_master_v1)
 
 # Implementation
 
@@ -53,8 +52,8 @@ All the goals that i want to be implemented/is implemented on luciole's board.
 In order to make luciole working there is some things to do. Firstly, luciole use some librairy that i have manually modified to fit perfectly with the app.
 
 Here is the links of the two modified librairy that you need to make it work:
-- ![WiFiManagerByjulfi](https://github.com/Weldybox-en/WiFiManagerByjulfi)
-- ![NTPClientByjulfi](https://github.com/Weldybox-en/NTPClientByjulfi)
+- [WiFiManagerByjulfi](https://github.com/Weldybox-en/WiFiManagerByjulfi)
+- [NTPClientByjulfi](https://github.com/Weldybox-en/NTPClientByjulfi)
 <p align="center"><i>You will find above a documentation with the installation informations</i><p>
   
  Here is the librairy list that you have to had: 
