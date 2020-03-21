@@ -43,7 +43,7 @@ All the goals that i want to be implemented/is implemented on luciole's board.
 - [x] Color storing **(up to 5)**
 - [x] Smart light **/w colors settings**
 - [x] Alarm light
-- [x] [RF remote control](https://github.com/Weldybox-en/Luciole_mini_master_v1)
+- [x] [RF master/slave communication](https://github.com/Weldybox-en/Luciole_mini_master_v1)
 
 # Implementation
 
